@@ -43,26 +43,7 @@ public class AADP_Lab_SoccerSimulator {
         String DB_URL = "jdbc:mysql://localhost/" + dbName;
         String USER = "football";
         String PASS = "Java is almost as good as football";
-        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/", USER, PASS);
-            Statement stmt = conn.createStatement();
-            stmt.execute("CREATE SCHEMA IF NOT EXISTS " + dbName +";");
-            stmt.execute("USE " + dbName + ";");
-            for (String team : teams) {
-                stmt.execute(
-                        "CREATE TABLE IF NOT EXISTS "+ team + " ("
-                                + "name VARCHAR(30) NOT NULL,"
-                                + "number INT NOT NULL PRIMARY KEY,"
-                                + "birth VARCHAR(30),"
-                                + "position VARCHAR(30),"
-                                + "goalsScored INT,"
-                                + "background TEXT(1000));"
-                );                
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+  
         int option;
         boolean exit = false;
         Scanner sc = new Scanner(System.in);
