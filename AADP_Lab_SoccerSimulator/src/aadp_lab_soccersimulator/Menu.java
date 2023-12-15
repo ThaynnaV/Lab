@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author lafla
+ * @author 2021267
  */
 public class Menu {
     Scanner sc = new Scanner(System.in);
@@ -18,7 +18,9 @@ public class Menu {
     public Menu() {
     
     }
-    public void DisplayMenuAndGetOption(){
+    
+    //DISPLAY OPTIONS TO USERS
+    public int DisplayMenuAndGetOption(){
         //first show options to the  user
         do {
             System.out.println("Welcome! What would you like to do today? Please enter the number corresponding to your choice.");
@@ -27,8 +29,21 @@ public class Menu {
             System.out.println("3. Simulate a number of matches.");
             System.out.println("4. Exit the programme.");            
         
-        
+//check the user input is betweej 1 and 4
+            try {
+                option = Integer.parseInt(sc.nextLine());
+                if (option >= 1 && option <= 4) {
+                    isValidOption = true;
+                } else {
+                    System.out.println("Please make sure to enter a number between 1 and 4.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a valid number.");
+            }
+            
+  
         } while (!isValidOption);//whie the options are correct
-        
+        return option;
+    
     }    
 }
