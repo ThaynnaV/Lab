@@ -16,14 +16,14 @@ import java.util.Scanner;
  * @author Sam
  * Please put the names and student numbers of the team here:
  * 
- * Name 1:
- * Number 1:
+ * Name 1:Magdalena
+ * Number 1:2021267
  * 
- * Name 2:
- * Number 2:
+ * Name 2:Alany
+ * Number 2:2021345
  * 
- * Name 3:
- * Number 3:
+ * Name 3:Thaynna
+ * Number 3:2021288
  * 
  * Name 4:
  * Number 4
