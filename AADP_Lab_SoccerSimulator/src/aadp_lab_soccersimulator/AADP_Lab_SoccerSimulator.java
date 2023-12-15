@@ -28,6 +28,8 @@ import java.util.Scanner;
  * Name 4:
  * Number 4
  * 
+ * Github link: https://github.com/ThaynnaV/Lab
+ * 
  */
 
 public class AADP_Lab_SoccerSimulator {
